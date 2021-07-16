@@ -4,6 +4,8 @@ Kotlin Dictionary is an example of study application, which consists of articles
 
 ## Features
 
+![](https://github.com/ElenaIbr/KotlinLibrary/blob/master/demo.gif)
+
 - look for articles using search 
 - get short information about sought-for topic and see code example
 - follow the link with full information about topic
