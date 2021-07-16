@@ -7,6 +7,7 @@ Kotlin Dictionary is an example of study application, which consists of articles
 - get short information about sought-for topic and see code example
 - follow the link with full information about topic
 
+
 ![](https://github.com/ElenaIbr/KotlinLibrary/blob/master/demo.gif)
 
 Main article list: Basic syntax, Idioms, Data types, Conditions and loops, Сlasses and objects, Functions.
