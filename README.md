@@ -14,7 +14,7 @@ Main article list: Basic syntax, Idioms, Data types, Conditions and loops, Сlas
 
 ## Tech
 
-Application was created in Android Studio 4.2.1 and works on API 19: Android 4.4 (KitKat).
+Application was created in Android Studio 4.2.1 and works on API 19: Android 4.4 (KitKat), compileSdkVersion 30.
 If you want to work in other versions, you may have to update gradle dependencies.
 
 ## Help
