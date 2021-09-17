@@ -1,6 +1,6 @@
 # Kotlin Library
 
-Kotlin Dictionary is an example of study application, which consists of articles about Kontlin language (short content, code images and links to kotlinlang.org).
+Kotlin Dictionary is an example of study application (and also it is my first app in Kotlin), which consists of articles about Kontlin language (short content, code images and links to kotlinlang.org).
 
 ## Features
 - look for articles using search 
