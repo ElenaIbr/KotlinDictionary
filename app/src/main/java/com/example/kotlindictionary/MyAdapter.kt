@@ -8,18 +8,18 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter( val arrayList: ArrayList<Item>, val context: Context):
-        RecyclerView.Adapter<MyAdapter.ViewHolder>(){
+class MyAdapter(val arrayList: ArrayList<Item>, val context: Context) :
+    RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //for row.xml
-        fun BindItems(item:Item){
+        fun BindItems(item: Item) {
             itemView.findViewById<TextView>(R.id.titleTv).text = item.title
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val inflater = LayoutInflater.from(parent.context).inflate(R.layout.row, parent,false)
+        val inflater = LayoutInflater.from(parent.context).inflate(R.layout.row, parent, false)
         return ViewHolder(inflater)
     }
 
@@ -55,7 +55,7 @@ class MyAdapter( val arrayList: ArrayList<Item>, val context: Context):
     }
 
     //this fun is used for category selection through drawerlayout
-    fun updateAdapter(listArray:List<Item>) {
+    fun updateAdapter(listArray: List<Item>) {
         arrayList.clear()
         arrayList.addAll(listArray)
         notifyDataSetChanged()

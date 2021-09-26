@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 override fun onQueryTextChange(newText: String?): Boolean {
 
                     val editText = searchView.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
-                    editText.hint = "Search the dictionary..."
+                    editText.hint = "Search the library..."
 
                     if(newText!!.isNotEmpty()) {
                         displayList.clear()
