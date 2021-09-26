@@ -32,19 +32,9 @@ class ItemActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.a_description).text = intent.getStringExtra("iDescription")
         findViewById<SubsamplingScaleImageView>(R.id.a_image).setImage(ImageSource.resource(intent.getIntExtra("iImageView", R.drawable.k_letter_ground)))
 
-        findViewById<CodeView>(R.id.code_view).code = "fun main() {\n" +
-                "    fun printDouble(d: Double) { print(d) }\n" +
-                "\n" +
-                "    val i = 1\n" +
-                "    val d = 1.0\n" +
-                "    val f = 1.0f\n" +
-                "\n" +
-                "    printDouble(d)\n" +
-                "//    printDouble(i) // Error: Type mismatch\n" +
-                "//    printDouble(f) // Error: Type mismatch\n" +
-                "}"
+        val codeArray = resources.getStringArray(R.array.categories_code_array)
+        findViewById<CodeView>(R.id.code_view).code = codeArray[0]
         findViewById<CodeView>(R.id.code_view).show()
-
 
         link = intent.getStringExtra("iLink")
     }

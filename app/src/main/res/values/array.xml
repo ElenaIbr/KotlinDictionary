@@ -384,4 +384,98 @@
         <item>https://kotlinlang.org/docs/functions.html#tail-recursive-functions</item>
     </string-array>
 
+    <array name="categories_code_array">
+        <item><![CDATA[package my.demo import kotlin.text.* // ...]]></item>
+        <item>@drawable/code_img12</item>
+        <item>@drawable/code_img13</item>
+        <item>@drawable/code_img14</item>
+        <item>@drawable/code_img15</item>
+        <item>@drawable/code_img16</item>
+        <item>@drawable/code_img17</item>
+        <item>@drawable/code_img18</item>
+        <item>@drawable/code_img19</item>
+        <item>@drawable/code_img110</item>
+
+        <item>@drawable/code_img21</item>
+        <item>@drawable/code_img22</item>
+        <item>@drawable/code_img23</item>
+        <item>@drawable/code_img24</item>
+        <item>@drawable/code_img25</item>
+        <item>@drawable/code_img26</item>
+        <item>@drawable/code_img27</item>
+        <item>@drawable/code_img28</item>
+        <item>@drawable/code_img29</item>
+        <item>@drawable/code_img210</item>
+        <item>@drawable/code_img211</item>
+        <item>@drawable/code_img212</item>
+        <item>@drawable/code_img213</item>
+        <item>@drawable/code_img214</item>
+        <item>@drawable/code_img215</item>
+        <item>@drawable/code_img216</item>
+        <item>@drawable/code_img217</item>
+        <item>@drawable/code_img218</item>
+        <item>@drawable/code_img219</item>
+        <item>@drawable/code_img220</item>
+        <item>@drawable/code_img221</item>
+        <item>@drawable/code_img222</item>
+        <item>@drawable/code_img223</item>
+        <item>@drawable/code_img224</item>
+        <item>@drawable/code_img225</item>
+        <item>@drawable/code_img226</item>
+        <item>@drawable/code_img227</item>
+        <item>@drawable/code_img228</item>
+        <item>@drawable/code_img229</item>
+        <item>@drawable/code_img230</item>
+
+        <item>@drawable/code_img31</item>
+        <item>@drawable/code_img32</item>
+        <item>@drawable/code_img33</item>
+        <item>@drawable/code_img34</item>
+        <item>@drawable/code_img35</item>
+        <item>@drawable/code_img36</item>
+        <item>@drawable/code_img37</item>
+        <item>@drawable/code_img38</item>
+        <item>@drawable/no_code</item>
+        <item>@drawable/no_code</item>
+        <item>@drawable/code_img311</item>
+        <item>@drawable/code_img312</item>
+        <item>@drawable/code_img313</item>
+        <item>@drawable/code_img314</item>
+        <item>@drawable/code_img315</item>
+
+        <item>@drawable/code_img41</item>
+        <item>@drawable/code_img42</item>
+        <item>@drawable/code_img43</item>
+        <item>@drawable/code_img44</item>
+        <item>@drawable/code_img45</item>
+        <item>@drawable/code_img46</item>
+
+        <item>@drawable/code_img51</item>
+        <item>@drawable/code_img52</item>
+        <item>@drawable/code_img53</item>
+        <item>@drawable/code_img54</item>
+        <item>@drawable/code_img55</item>
+        <item>@drawable/code_img56</item>
+        <item>@drawable/no_code</item>
+        <item>@drawable/code_img58</item>
+        <item>@drawable/code_img59</item>
+        <item>@drawable/code_img510</item>
+        <item>@drawable/code_img511</item>
+        <item>@drawable/code_img512</item>
+
+
+        <item>@drawable/code_img61</item>
+        <item>@drawable/code_img62</item>
+        <item>@drawable/code_img63</item>
+        <item>@drawable/code_img64</item>
+        <item>@drawable/code_img65</item>
+        <item>@drawable/code_img66</item>
+        <item>@drawable/no_code</item>
+        <item>@drawable/code_img68</item>
+        <item>@drawable/code_img69</item>
+        <item>@drawable/code_img610</item>
+        <item>@drawable/code_img611</item>
+        <item>@drawable/code_img612</item>
+    </array>
+
 </resources>

@@ -18,8 +18,8 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    val arrayList = ArrayList<Item>()
-    val displayList = ArrayList<Item>()
+    val arrayList = ArrayList<Article>()
+    val displayList = ArrayList<Article>()
 
     private var adapter : MyAdapter? = null
 
@@ -139,9 +139,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
-    private fun fillArray(topic: String):List<Item>{
+    private fun fillArray(topic: String):List<Article>{
 
-        val itemArray = ArrayList<Item>()
+        val itemArray = ArrayList<Article>()
 
         val titleArray = resources.getStringArray(R.array.categories)
         val desArray = resources.getStringArray(R.array.categories_content)
@@ -151,7 +151,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val categoryArray = resources.getStringArray(R.array.titles)
 
             for(n in 0..titleArray.size-1) {
-                var listItem = Item(titleArray[n],
+                var listItem = Article(titleArray[n],
                     desArray[n],
                     imgArray[n],
                     categoryArray[(Character.getNumericValue(topic.first()))-1],
