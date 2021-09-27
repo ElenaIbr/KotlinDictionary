@@ -1,17 +1,19 @@
 <resources>
-    <string name="app_name">KOTLIN LIBRARY</string>
+    <string name="app_name">Kotlin Library</string>
     <string name="search_name">Search</string>
 
     <string name="see_exm">Please see an example below:</string>
     <string name="des">Description</string>
     <string name="title">Title</string>
-    <string name="link">More Content From Kotlinlang.org</string>
+    <string name="link">go to website</string>
 
     <string name="all">All categories</string>
     <string name="basic_syntax">1. Basic syntax</string>
     <string name="idioms">2. Idioms</string>
     <string name="data_types">3. Data types</string>
     <string name="conditions_loops">4. Conditions and loops</string>
-    <string name="classes_objects">5. Сlasses and objects</string>
+    <string name="classes_objects">5. Classes and objects</string>
     <string name="functions">6. Functions</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="back_k">15</dimen>
+    <dimen name="margin_horizontal">16dp</dimen>
+    <dimen name="app_padding">10dp</dimen>
+    <dimen name="scroll_padding">5dp</dimen>
 </resources>

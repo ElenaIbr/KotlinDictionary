@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#191970</color>
-    <color name="mokasin">#FFE4B5</color>
     <color name="dark_gray">#483D8B</color>
     <color name="fon_gray">#444444</color>
     <color name="header_color">#1f1f1f</color>
     <color name="font_color">#696969</color>
+    <color name="metal">#473E46</color>
+    <color name="pale_brown">#CFA77F</color>
+    <color name="orange">#E4BD75</color>
+    <color name="orange_alpha">#1BE4BD75</color>
 </resources>

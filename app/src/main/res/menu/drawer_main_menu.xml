@@ -10,23 +10,17 @@
     <item android:title="Including:">
         <menu>
             <item android:title="@string/basic_syntax"
-                android:id="@+id/id_basic_syntax"
-                android:icon="@drawable/point"/>
+                android:id="@+id/id_basic_syntax"/>
             <item android:title="@string/idioms"
-                android:id="@+id/id_idioms"
-                android:icon="@drawable/point"/>
+                android:id="@+id/id_idioms"/>
             <item android:title="@string/data_types"
-                android:id="@+id/id_data_types"
-                android:icon="@drawable/point"/>
+                android:id="@+id/id_data_types"/>
             <item android:title="@string/conditions_loops"
-                android:id="@+id/id_conditions_loops"
-                android:icon="@drawable/point"/>
+                android:id="@+id/id_conditions_loops"/>
             <item android:title="@string/classes_objects"
-                android:id="@+id/id_classes_objects"
-                android:icon="@drawable/point"/>
+                android:id="@+id/id_classes_objects"/>
             <item android:title="@string/functions"
-                android:id="@+id/id_functions"
-                android:icon="@drawable/point"/>
+                android:id="@+id/id_functions"/>
         </menu>
     </item>
     </group>
