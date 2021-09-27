@@ -2,6 +2,9 @@
 
 Kotlin Dictionary is an example of study application, which consists of articles about Kontlin language (short content, code images and links to kotlinlang.org).
 
+
+![](https://github.com/ElenaIbr/KotlinLibrary/blob/master/demo1.gif)
+
 ## Features
 
 - look for articles using search 
