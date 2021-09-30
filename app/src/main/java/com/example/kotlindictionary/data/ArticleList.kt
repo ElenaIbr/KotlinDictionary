@@ -1,6 +1,4 @@
-package com.example.kotlindictionary.data
-
-import com.example.kotlindictionary.data.Article
+package com.ibraeva.kotlinlibrary.data
 
 object ArticleList {
 
@@ -9,7 +7,7 @@ object ArticleList {
         Article(
             paragraph = "1.1.",
             title = "Package definition and imports",
-            des = "Package specification should be at the top of the source file.\n\nIt is not required to match directories and packages: source files can be placed arbitrarily in the file system.",
+            des = "Package specification should be at the top of the source file.\nIt is not required to match directories and packages: source files can be placed arbitrarily in the file system.",
             top = "1. Basic syntax",
             code = "\n" +
                     "package my.demo\n" +
@@ -25,16 +23,18 @@ object ArticleList {
             des = "An entry point of a Kotlin application is the main function.",
             top = "1. Basic syntax",
             code = "\n" + "fun main() {\n" +
-                    "    println(\"Hello world!\")\n" +
+                    "    printHello(\"Elena\")\n" +
                     "}\n" +
-                    "fun main(args: Array<String>) {\n" +
-                    "    println(\"Hello Kotlin!\")\n" + "\n",
+                    "fun printHello(name: String) {\n" +
+                    "    println(\"Hello, \$name!\")\n" +
+                    "}\n" +
+                    "//output: Hello, Elena!\n",
             link = "https://kotlinlang.org/docs/basic-syntax.html#program-entry-point"
         ),
         Article(
             paragraph = "1.3.",
             title = "Print to the standard output",
-            des = "Print prints its argument to the standard output.\n\nPrintln prints its arguments and adds a line break, so that the next thing you print appears on the next line.",
+            des = "Print prints its argument to the standard output.\nPrintln prints its arguments and adds a line break, so that the next thing you print appears on the next line.",
             top = "1. Basic syntax",
             code = "\n" + "print(\"Hello \")\n" +
                     "print(\"world!\")\n" +
@@ -65,7 +65,7 @@ object ArticleList {
         Article(
             paragraph = "1.5.",
             title = "Variables",
-            des = "Read-only local variables are defined using the keyword val. They can be assigned a value only once.\n\nVariables that can be reassigned use the var keyword.",
+            des = "Read-only local variables are defined using the keyword val. They can be assigned a value only once.\nVariables that can be reassigned use the var keyword.",
             top = "1. Basic syntax",
             code = "\n" + "val a: Int = 1\n" +
                     "//immediate assignment\n" +
@@ -83,7 +83,7 @@ object ArticleList {
         Article(
             paragraph = "1.6.",
             title = "Creating classes and instances",
-            des = "To define a class, use the class keyword.Properties of a class can be listed in its declaration or body.\n\nThe default constructor with parameters listed in the class declaration is available automatically.\n\nInheritance between classes is declared by a colon (: ). Classes are final by default; to make a class inheritable, mark it as open.",
+            des = "To define a class, use the class keyword.Properties of a class can be listed in its declaration or body.\nThe default constructor with parameters listed in the class declaration is available automatically.\nInheritance between classes is declared by a colon (: ). Classes are final by default; to make a class inheritable, mark it as open.",
             top = "1. Basic syntax",
             code = "\n" + "open class Shape\n" +
                     "\n" +
@@ -110,7 +110,7 @@ object ArticleList {
         Article(
             paragraph = "1.8.",
             title = "String templates",
-            des = "String literals may contain template expressions - pieces of code that are evaluated and whose results are concatenated into the string.\n\nA template expression starts with a dollar sign (\$) and consists of either a name.",
+            des = "String literals may contain template expressions - pieces of code that are evaluated and whose results are concatenated into the string.\nA template expression starts with a dollar sign (\$) and consists of either a name.",
             top = "1. Basic syntax",
             code = "\n" + "val i = 10\n" +
                     "println(\"i = \$i\") // prints \"i = 10\"\n" +
@@ -139,7 +139,7 @@ object ArticleList {
         Article(
             paragraph = "1.10.",
             title = "While loop",
-            des = "While and do-while loops execute their body continuously while their condition is satisfied. The difference between them is the condition checking time:\n• while checks the condition and, if it's satisfied, executes the body and then returns to the condition check.\n• do-while executes the body and then checks the condition. If it's satisfied, the loop repeats. So, the body of do-while executes at least once regardless of the condition.",
+            des = "While and do-while loops execute their body continuously while their condition is satisfied. The difference between them is the condition checking time:\n•while checks the condition and, if it's satisfied, executes the body and then returns to the condition check.\n•do-while executes the body and then checks the condition. If it's satisfied, the loop repeats. So, the body of do-while executes at least once regardless of the condition.",
             top = "1. Basic syntax",
             code = "\n" + "val items = listOf(\"apple\", \"banana\", \"kiwifruit\")\n" +
                     "var index = 0\n" +
@@ -152,8 +152,8 @@ object ArticleList {
         Article(
             paragraph = "2.1.",
             title = "Create DTOs",
-            des = "For example code below provides a Customer class with the following functionality:\n• getters (and setters in case of var s) for all properties\n• equals()\n• hashCode()\n• toString()\n• copy()\n" +
-                    "• component1(), component2(), ..., for all properties",
+            des = "For example code below provides a Customer class with the following functionality:\n•getters (and setters in case of var s) for all properties\n•equals()\n•hashCode()\n•toString()\n•copy()\n" +
+                    "•component1(), component2(), ..., for all properties",
             top = "2. Idioms",
             code = "\n" + "data class Customer(val name: String, val email: String)" + "\n",
             link = "https://kotlinlang.org/docs/idioms.html#create-dtos-pojos-pocos"
@@ -161,7 +161,7 @@ object ArticleList {
         Article(
             paragraph = "2.2.",
             title = "Default values for function parameters",
-            des = "Kotlin supports default arguments in function declarations. You can specify a default value for a function parameter. The default value is used when the corresponding argument is omitted from the function call.\n\nIf you call the below function with two arguments, it works just like any other function and uses the values passed in the arguments. However, If you omit the argument that has a default value from the function call, then the default value is used in the function body.",
+            des = "Kotlin supports default arguments in function declarations. You can specify a default value for a function parameter. The default value is used when the corresponding argument is omitted from the function call.\nIf you call the below function with two arguments, it works just like any other function and uses the values passed in the arguments. However, If you omit the argument that has a default value from the function call, then the default value is used in the function body.",
             top = "2. Idioms",
             code = "\n" + "fun displayGreeting(message: String, name: String = \"Guest\") {\n" +
                     "    println(\"Hello \$name, \$message\")\n" +
@@ -173,9 +173,9 @@ object ArticleList {
         Article(
             paragraph = "2.3.",
             title = "Filter a list",
-            des = "Filtering is one of the most popular tasks in collection processing. In Kotlin, filtering conditions are defined by predicates – lambda functions that take a collection element and return a boolean value: true means that the given element matches the predicate, false means the opposite.\n" +
+            des = "Filtering is one of the most popular tasks in collection processing. In Kotlin, filtering conditions are defined by predicates – lambda functions that take a collection element and return a boolean value: true means that the given element matches the predicate, false means the opposite." +
                     "\n" +
-                    "The standard library contains a group of extension functions that let you filter collections in a single call. These functions leave the original collection unchanged, so they are available for both mutable and read-only collections. To operate the filtering result, you should assign it to a variable or chain the functions after filtering.\n" +
+                    "The standard library contains a group of extension functions that let you filter collections in a single call. These functions leave the original collection unchanged, so they are available for both mutable and read-only collections. To operate the filtering result, you should assign it to a variable or chain the functions after filtering." +
                     "\n" +
                     "The basic filtering function is filter(). When called with a predicate, filter() returns the collection elements that match it. For both List and Set, the resulting collection is a List, for Map it's a Map as well.",
             top = "2. Idioms",
@@ -192,7 +192,6 @@ object ArticleList {
             paragraph = "2.4.",
             title = "Check element existence",
             des = "To check the presence of an element in a collection, use the contains() function. It returns true if there is a collection element that equals() the function argument. You can call contains() in the operator form with the in keyword.\n" +
-                    "\n" +
                     "To check the presence of multiple instances together at once, call containsAll() with a collection of these instances as an argument.",
             top = "2. Idioms",
             code = "\n" + "val numbers = listOf(\"one\", \"two\", \"three\", \"four\", \"five\", \"six\")\n" +
@@ -242,11 +241,11 @@ object ArticleList {
         Article(
             paragraph = "2.8.",
             title = "Read-only map",
-            des = "The mapOf returns a new read-only map with the specified contents, given as a list of pairs where the first value is the key and the second is the value.\n" +
+            des = "The mapOf returns a new read-only map with the specified contents, given as a list of pairs where the first value is the key and the second is the value." +
                     "\n" +
-                    "If multiple pairs have the same key, the resulting map will contain the value from the last of those pairs.\n" +
+                    "If multiple pairs have the same key, the resulting map will contain the value from the last of those pairs." +
                     "\n" +
-                    "Entries of the map are iterated in the order they were specified.\n" +
+                    "Entries of the map are iterated in the order they were specified." +
                     "\n" +
                     "The returned map is serializable (JVM).",
             top = "2. Idioms",
@@ -256,7 +255,7 @@ object ArticleList {
         ),
         Article(
             paragraph = "2.9.",
-            title = "Accessing Map Entires",
+            title = "Accessing map entries",
             des = "We use the get method to retrieve values from maps. Kotlin also allows the use of bracket notation as a shorthand for the get method.",
             top = "2. Idioms",
             code = "\n" + "val map = mapOf(\"Vanilla\" to 24)\n" +
@@ -285,9 +284,9 @@ object ArticleList {
         Article(
             paragraph = "2.11.",
             title = "Range",
-            des = "A range defines a closed interval in the mathematical sense: it is defined by its two endpoint values which are both included in the range. Ranges are defined for comparable types: having an order, you can define whether an arbitrary instance is in the range between two given instances.\n" +
+            des = "A range defines a closed interval in the mathematical sense: it is defined by its two endpoint values which are both included in the range. Ranges are defined for comparable types: having an order, you can define whether an arbitrary instance is in the range between two given instances." +
                     "\n" +
-                    "The main operation on ranges is contains, which is usually used in the form of in and !in operators.\n" +
+                    "The main operation on ranges is contains, which is usually used in the form of in and !in operators." +
                     "\n" +
                     "To create a range for your class, call the rangeTo() function on the range start value and provide the end value as an argument. rangeTo() is often called in its operator form .. .",
             top = "2. Idioms",
@@ -320,11 +319,11 @@ object ArticleList {
         Article(
             paragraph = "2.13.",
             title = "Extension functions",
-            des = "Kotlin provides the ability to extend a class with new functionality without having to inherit from the class or use design patterns such as Decorator. This is done via special declarations called extensions.\n" +
+            des = "Kotlin provides the ability to extend a class with new functionality without having to inherit from the class or use design patterns such as Decorator. This is done via special declarations called extensions." +
                     "\n" +
-                    "For example, you can write new functions for a class from a third-party library that you can't modify. Such functions can be called in the usual way, as if they were methods of the original class. This mechanism is called an extension function. There are also extension properties that let you define new properties for existing classes.\n" +
+                    "For example, you can write new functions for a class from a third-party library that you can't modify. Such functions can be called in the usual way, as if they were methods of the original class. This mechanism is called an extension function. There are also extension properties that let you define new properties for existing classes." +
                     "\n" +
-                    "To declare an extension function, prefix its name with a receiver type, which refers to the type being extended. The following adds a swap function to MutableList<Int>:",
+                    "To declare an extension function, prefix its name with a receiver type, which refers to the type being extended. The following adds a swap function to MutableList<Int>.",
             top = "2. Idioms",
             code = "\n" + "fun MutableList<Int>.swap(index1: Int, index2: Int) {\n" +
                     "    val tmp = this[index1] // 'this' corresponds to the list\n" +
@@ -344,15 +343,16 @@ object ArticleList {
                     "\n" +
                     "    }\n" +
                     "}\n" +
-                    "val obj = CompanionClass.CompanionObject" + "\n",
+                    "val obj = CompanionClass.CompanionObject\n" +
+                    "\n",
             link = "https://blog.mindorks.com/companion-object-in-kotlin",
         ),
         Article(
             paragraph = "2.15.",
-            title = "Kotlin Abstract Class with examples",
-            des = "An abstract class cannot be instantiated, which means we cannot create the object of an abstract class. Unlike other class, an abstract class is always open so we do not need to use the open keyword.\n" +
+            title = "Abstract class with examples",
+            des = "An abstract class cannot be instantiated, which means we cannot create the object of an abstract class. Unlike other class, an abstract class is always open so we do not need to use the open keyword." +
                     "\n" +
-                    "In the following example we have an abstract class Student, we cannot create an object of this class. However we can inherit this class, like we did in the following example. Class College inherits abstract class Student.\n" +
+                    "In the following example we have an abstract class Student, we cannot create an object of this class. However we can inherit this class, like we did in the following example. Class College inherits abstract class Student." +
                     "\n" +
                     "The function func() is an abstract function which means it doesn’t have a body and only method signature, however since it is an abstract function, it must be overriden in the child class.",
             top = "2. Idioms",
@@ -389,21 +389,26 @@ object ArticleList {
         Article(
             paragraph = "2.16.",
             title = "The let",
-            des = "The context object is available as an argument (it). The return value is the lambda result.\n" +
-                    "\n" +
-                    "The let can be used to invoke one or more functions on results of call chains. For example, the following code prints the results of two operations on a collection:",
+            des = " takes the object it is invoked upon as the parameter and returns the result of the lambda expression.\n" +
+                    "Kotlin let is a scoping function wherein the variables declared inside the expression cannot be used outside.",
             top = "2. Idioms",
-            code = "\n" + "val numbers = mutableListOf(\"one\", \"two\", \"three\", \"four\", \"five\")\n" +
-                    "val resultList = numbers.map { it.length }.filter { it > 3 }\n" +
-                    "println(resultList)" + "\n",
+            code = "\n" + "fun main(args: Array<String>) {\n" +
+                    "    var str = \"Hello World\"\n" +
+                    "    str.let { println(\"\$it!!\") }\n" +
+                    "    println(str)\n" +
+                    "\n" +
+                    "}\n" +
+                    "//Prints\n" +
+                    "//Hello World!!\n" +
+                    "//Hello World" + "\n",
             link = "https://www.journaldev.com/19467/kotlin-let-run-also-apply-with",
         ),
         Article(
             paragraph = "2.17.",
             title = "The run",
-            des = "The context object is available as a receiver (this). The return value is the lambda result.\n" +
+            des = "The context object is available as a receiver (this). The return value is the lambda result." +
                     "\n" +
-                    "The run does the same as with but invokes as let- as an extension function of the context object.\n" +
+                    "The run does the same as with but invokes as let- as an extension function of the context object." +
                     "\n" +
                     "The run is useful when your lambda contains both the object initialization and the computation of the return value.",
             top = "2. Idioms",
@@ -424,7 +429,7 @@ object ArticleList {
         Article(
             paragraph = "2.18.",
             title = "The with",
-            des = "A non-extension function: the context object is passed as an argument, but inside the lambda, it's available as a receiver (this). The return value is the lambda result.\n" +
+            des = "A non-extension function: the context object is passed as an argument, but inside the lambda, it's available as a receiver (this). The return value is the lambda result." +
                     "\n" +
                     "It is recommended with for calling functions on the context object without providing the lambda result. In the code, with can be read as “ with this object, do the following.”",
             top = "2. Idioms",
@@ -489,17 +494,6 @@ object ArticleList {
         ),
         Article(
             paragraph = "2.22.",
-            title = "If expression",
-            des = "Below we have a condition in the if expression, if the condition returns true then the statements inside the body of if expression are executed, if the condition returns false then they are completely ignored.",
-            top = "2. Idioms",
-            code = "\n" + "if(condition){  \n" +
-                    "   // Statements that need to be executed if condition is true \n" +
-                    "   ...\n" +
-                    "} " + "\n",
-            link = "https://beginnersbook.com/2018/09/kotlin-if-else-expression/",
-        ),
-        Article(
-            paragraph = "2.23.",
             title = "Builder-style usage of methods that return Unit",
             des = "",
             top = "2. Idioms",
@@ -509,9 +503,9 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/idioms.html#builder-style-usage-of-methods-that-return-unit",
         ),
         Article(
-            paragraph = "2.24.",
+            paragraph = "2.23.",
             title = "Single-expression functions",
-            des = "The single expression function, as his name suggests, is the function that just has a single expression. We can remove the return type of that function, braces as well as return keyword from it.\n" +
+            des = "The single expression function, as his name suggests, is the function that just has a single expression. We can remove the return type of that function, braces as well as return keyword from it." +
                     "\n" +
                     "Think about a function that has some calculation to be done based on the passed argument and return the result.",
             top = "2. Idioms",
@@ -521,7 +515,7 @@ object ArticleList {
             link = "https://agrawalsuneet.github.io/blogs/kotlin-single-expression-function/",
         ),
         Article(
-            paragraph = "2.25.",
+            paragraph = "2.24.",
             title = "Call multiple methods on an object instance (with)",
             des = "",
             top = "2. Idioms",
@@ -544,9 +538,9 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/idioms.html#call-multiple-methods-on-an-object-instance-with",
         ),
         Article(
-            paragraph = "2.26.",
+            paragraph = "2.25.",
             title = "The apply",
-            des = "The context object is available as a receiver (this). The return value is the object itself.\n" +
+            des = "The context object is available as a receiver (this). The return value is the object itself." +
                     "\n" +
                     "Use apply for code blocks that don't return a value and mainly operate on the members of the receiver object. The common case for apply is the object configuration. Such calls can be read as “ apply the following assignments to the object.”",
             top = "2. Idioms",
@@ -558,20 +552,20 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/scope-functions.html#apply",
         ),
         Article(
-            paragraph = "2.27.",
+            paragraph = "2.26.",
             title = "Java 7\'s try-with-resources",
             des = "",
             top = "2. Idioms",
             code = "\n" + "val stream = Files.newInputStream(Paths.get(\"/some/file.txt\"))\n" +
                     "stream.buffered().reader().use { reader ->\n" +
                     "    println(reader.readText())\n" +
-                    "}\n" + "\n",
+                    "}\n",
             link = "https://kotlinlang.org/docs/idioms.html#java-7-s-try-with-resources",
         ),
         Article(
-            paragraph = "2.28.",
+            paragraph = "2.27.",
             title = "The out",
-            des = "Let’s say that we want to create a producer class that will be producing a result of some type T. Sometimes; we want to assign that produced value to a reference that is of a supertype of the type T.\n" +
+            des = "Let’s say that we want to create a producer class that will be producing a result of some type T. Sometimes; we want to assign that produced value to a reference that is of a supertype of the type T." +
                     "\n" +
                     "To achieve that using Kotlin, we need to use the out keyword on the generic type. It means that we can assign this reference to any of its supertypes. The out value can be only be produced by the given class but not consumed:",
             top = "2. Idioms",
@@ -583,9 +577,9 @@ object ArticleList {
             link = "https://www.baeldung.com/kotlin/generics#kotlin-out-and-in-keywords",
         ),
         Article(
-            paragraph = "2.29.",
+            paragraph = "2.28.",
             title = "The in",
-            des = "Sometimes, we have an opposite situation meaning that we have a reference of type T and we want to be able to assign it to the subtype of T.\n" +
+            des = "Sometimes, we have an opposite situation meaning that we have a reference of type T and we want to be able to assign it to the subtype of T." +
                     "\n" +
                     "We can use the in keyword on the generic type if we want to assign it to the reference of its subtype. The in keyword can be used only on the parameter type that is consumed, not produced:",
             top = "2. Idioms",
@@ -597,7 +591,7 @@ object ArticleList {
             link = "https://www.baeldung.com/kotlin/generics#2-the-in-keyword",
         ),
         Article(
-            paragraph = "2.30.",
+            paragraph = "2.29.",
             title = "Swap two variables",
             des = "",
             top = "2. Idioms",
@@ -609,7 +603,7 @@ object ArticleList {
         Article(
             paragraph = "3.1.",
             title = "Integer types",
-            des = "Kotlin provides a set of built-in types that represent numbers. For integer numbers, there are four types with different sizes and, hence, value ranges: \n• Byte (8 bits: from  -128 to 127) \n• Short (16 bits: from  -32768 to 32767) \n• Int (32 bits: from  -2^31 to 2^31- 1) \n• Long (64 bits: from -2^63 to 2^63- 1)\n\nAll variables initialized with integer values not exceeding the maximum value of Int have the inferred type Int. If the initial value exceeds this value, then the type is Long. To specify the Long value explicitly, append the suffix L to the value.\n",
+            des = "Kotlin provides a set of built-in types that represent numbers. For integer numbers, there are four types with different sizes and, hence, value ranges: \n•Byte (8 bits: from  -128 to 127) \n•Short (16 bits: from  -32768 to 32767) \n•Int (32 bits: from  -2^31 to 2^31- 1) \n•Long (64 bits: from -2^63 to 2^63- 1)\nAll variables initialized with integer values not exceeding the maximum value of Int have the inferred type Int. If the initial value exceeds this value, then the type is Long. To specify the Long value explicitly, append the suffix L to the value.",
             top = "3. Data types",
             code = "\n" + "val one = 1 // Int\n" +
                     "val threeBillion = 3000000000 // Long\n" +
@@ -620,7 +614,7 @@ object ArticleList {
         Article(
             paragraph = "3.2.",
             title = "Floating-point types",
-            des = "For real numbers, Kotlin provides floating–point types Float and Double. Floating point types differ by their decimal place, that is, how many decimal digits they can store. There are two floating–point types: \n• Float (32 bits, decimal digits: 6/-7) \n• Double (64 bits, decimal digits: 15/-16)\n\nYou can initialize Double and Float variables with numbers having a fractional part. It is separated from the integer part by a period (.) For variables initialized with fractional numbers, the compiler infers the Double type.\n",
+            des = "For real numbers, Kotlin provides floating–point types Float and Double. Floating point types differ by their decimal place, that is, how many decimal digits they can store. There are two floating–point types: \n•Float (32 bits, decimal digits: 6/-7) \n•Double (64 bits, decimal digits: 15/-16)\nYou can initialize Double and Float variables with numbers having a fractional part. It is separated from the integer part by a period (.) For variables initialized with fractional numbers, the compiler infers the Double type.",
             top = "3. Data types",
             code = "\n" + "val pi = 3.14 // Double\n" +
                     "// val one: Double = 1 // Error: type mismatch\n" +
@@ -632,7 +626,7 @@ object ArticleList {
         Article(
             paragraph = "3.3.",
             title = "Literal constants",
-            des = "There are the following kinds of literal constants for integral values: \n• Decimals: 123 \n• Hexadecimals: 0x0F \n• Binaries: 0b00001011 \n\nKotlin also supports a conventional notation for floating-point numbers: \n• Doubles by default: 123.5, 123.5e10 \n• Floats are tagged by f or F: 123.5f \n\nYou can use underscores to make number constants more readable.",
+            des = "There are the following kinds of literal constants for integral values: \n•Decimals: 123 \n•Hexadecimals: 0x0F \n•Binaries: 0b00001011 \nKotlin also supports a conventional notation for floating-point numbers: \n•Doubles by default: 123.5, 123.5e10 \n•Floats are tagged by f or F: 123.5f \nYou can use underscores to make number constants more readable.",
             top = "3. Data types",
             code = "\n" + "val oneMillion = 1_000_000\n" +
                     "val creditCardNumber = 1234_5678_9012_3456L\n" +
@@ -644,7 +638,7 @@ object ArticleList {
         Article(
             paragraph = "3.4.",
             title = "Numbers representation on the JVM",
-            des = "On the JVM platform, numbers are stored as primitive types: int, double, and so on. Exceptions are cases when you create a nullable number reference such as Int? or use generics. In these cases numbers are boxed in Java classes Integer, Double, and so on.\n\nNote that nullable references to the same number can be different objects:\n",
+            des = "On the JVM platform, numbers are stored as primitive types: int, double, and so on. Exceptions are cases when you create a nullable number reference such as Int? or use generics. In these cases numbers are boxed in Java classes Integer, Double, and so on.\nNote that nullable references to the same number can be different objects:",
             top = "3. Data types",
             code = "\n" + "val a: Int = 100\n" +
                     "val boxedA: Int? = a\n" +
@@ -661,7 +655,7 @@ object ArticleList {
         Article(
             paragraph = "3.5.",
             title = "Explicit conversions",
-            des = "Due to different representations, smaller types are not subtypes of bigger ones. If they were, we would have troubles of the following sort, so equality would have been lost silently, not to mention identity.\n\nAs a consequence, smaller types are NOT implicitly converted to bigger types. This means that assigning a value of type Byte to an Int variable requires an explicit conversion. All number types support conversions to other types:\n• toByte(): Byte\n• toShort(): Short\n• toInt(): Int\n• toLong(): Long\n• toFloat(): Float\n• toDouble(): Double\n• toChar(): Char",
+            des = "Due to different representations, smaller types are not subtypes of bigger ones. If they were, we would have troubles of the following sort, so equality would have been lost silently, not to mention identity.\nAs a consequence, smaller types are NOT implicitly converted to bigger types. This means that assigning a value of type Byte to an Int variable requires an explicit conversion. All number types support conversions to other types:\n•toByte(): Byte\n•toShort(): Short\n•toInt(): Int\n•toLong(): Long\n•toFloat(): Float\n•toDouble(): Double\n•toChar(): Char",
             top = "3. Data types",
             code = "\n" + "// Hypothetical code, does not actually compile:\n" +
                     "val a: Int? = 1 // A boxed Int (java.lang.Integer)\n" +
@@ -683,7 +677,7 @@ object ArticleList {
         Article(
             paragraph = "3.7.",
             title = "Division of integers",
-            des = "Division between integers numbers always returns an integer number. Any fractional part is discarded. This is true for a division between any two integer types.\n\nTo return a floating-point type, explicitly convert one of the arguments to a floating-point type.",
+            des = "Division between integers numbers always returns an integer number. Any fractional part is discarded. This is true for a division between any two integer types.\nTo return a floating-point type, explicitly convert one of the arguments to a floating-point type.",
             top = "3. Data types",
             code = "\n" + "val x = 5 / 2\n" +
                     "//println(x == 2.5) // ERROR: Operator '==' cannot be applied to 'Int' and 'Double'\n" +
@@ -697,7 +691,7 @@ object ArticleList {
         Article(
             paragraph = "3.8.",
             title = "Bitwise operations",
-            des = "Kotlin provides a set of bitwise operations on integer numbers. They operate on the binary level directly with bits of the numbers representation. Here is the complete list of bitwise operations:\n• shl(bits) – signed shift left\n• shr(bits) – signed shift right\n• ushr(bits) – unsigned shift right\n• and(bits) – bitwise and\n• or(bits) – bitwise or\n• xor(bits) – bitwise xor\n• inv() – bitwise inversion",
+            des = "Kotlin provides a set of bitwise operations on integer numbers. They operate on the binary level directly with bits of the numbers representation. Here is the complete list of bitwise operations:\n•shl(bits) – signed shift left\n•shr(bits) – signed shift right\n•ushr(bits) – unsigned shift right\n•and(bits) – bitwise and\n•or(bits) – bitwise or\n•xor(bits) – bitwise xor\n•inv() – bitwise inversion",
             top = "3. Data types",
             code = "\n" + "val x = (1 shl 2) and 0x000FF000" + "\n",
             link = "https://kotlinlang.org/docs/basic-types.html#operations",
@@ -705,7 +699,7 @@ object ArticleList {
         Article(
             paragraph = "3.9.",
             title = "Floating-point numbers comparison",
-            des = "The operations on floating-point numbers discussed in this section are:\n• Equality checks: a == b and a != b\n• Comparison operators: a less than b, a more than b, a less or equal b, a more or equal b\n• Range instantiation and range checks: a..b, x in a..b, x !in a..b\n\nWhen the operands a and b are statically known to be Float or Double or their nullable counterparts (the type is declared or inferred or is a result of a smart cast ), the operations on the numbers and the range that they form follow the IEEE 754 Standard for Floating-Point Arithmetic. However, to support generic use cases and provide total ordering, when the operands are not statically typed as floating point numbers (e.g. Any, Comparable, a type parameter), the operations use the equals and compareTo implementations for Float and Double, which disagree with the standard, so that:\n· NaN is considered equal to itself\n· NaN is considered greater than any other element including POSITIVE_INFINITY\n· -0.0 is considered less than 0.0",
+            des = "The operations on floating-point numbers discussed in this section are:\n•Equality checks: a == b and a != b\n•Comparison operators: a less than b, a more than b, a less or equal b, a more or equal b\n•Range instantiation and range checks: a..b, x in a..b, x !in a..b\nWhen the operands a and b are statically known to be Float or Double or their nullable counterparts (the type is declared or inferred or is a result of a smart cast ), the operations on the numbers and the range that they form follow the IEEE 754 Standard for Floating-Point Arithmetic. However, to support generic use cases and provide total ordering, when the operands are not statically typed as floating point numbers (e.g. Any, Comparable, a type parameter), the operations use the equals and compareTo implementations for Float and Double, which disagree with the standard, so that:\n•NaN is considered equal to itself\n•NaN is considered greater than any other element including POSITIVE_INFINITY\n•-0.0 is considered less than 0.0",
             top = "3. Data types",
             code = "",
             link = "https://kotlinlang.org/docs/basic-types.html#floating-point-numbers-comparison",
@@ -713,7 +707,7 @@ object ArticleList {
         Article(
             paragraph = "3.10.",
             title = "Unsigned integers",
-            des = "In addition to integer types, Kotlin provides the following types for unsigned integer numbers:\n•UByte: an unsigned 8-bit integer, ranges from 0 to 255\n•UShort: an unsigned 16-bit integer, ranges from 0 to 65535\n•UInt: an unsigned 32-bit integer, ranges from 0 to 2^32 - 1\n•ULong: an unsigned 64-bit integer, ranges from 0 to 2^64 - 1\n\nUnsigned types support most of the operations of their signed counterparts.",
+            des = "In addition to integer types, Kotlin provides the following types for unsigned integer numbers:\n•UByte: an unsigned 8-bit integer, ranges from 0 to 255\n•UShort: an unsigned 16-bit integer, ranges from 0 to 65535\n•UInt: an unsigned 32-bit integer, ranges from 0 to 2^32 - 1\n•ULong: an unsigned 64-bit integer, ranges from 0 to 2^64 - 1\nUnsigned types support most of the operations of their signed counterparts.",
             top = "3. Data types",
             code = "",
             link = "https://kotlinlang.org/docs/basic-types.html#unsigned-integers",
@@ -721,7 +715,7 @@ object ArticleList {
         Article(
             paragraph = "3.11.",
             title = "Booleans",
-            des = "The type Boolean represents boolean objects that can have two values: true and false. Boolean has a nullable counterpart Boolean? that also has the null value.Built-in operations on booleans include:\n• || – disjunction (logical OR)\n•  – conjunction (logical AND)\n• !- negation (logical NOT)\n|| and && work lazily.\n",
+            des = "The type Boolean represents boolean objects that can have two values: true and false. Boolean has a nullable counterpart Boolean? that also has the null value.Built-in operations on booleans include:\n• || – disjunction (logical OR)\n• – conjunction (logical AND)\n• !- negation (logical NOT)\n|| and && work lazily.\n",
             top = "3. Data types",
             code = "\n" + "val myTrue: Boolean = true\n" +
                     "val myFalse: Boolean = false\n" +
@@ -735,7 +729,7 @@ object ArticleList {
         Article(
             paragraph = "3.12.",
             title = "Characters",
-            des = "Characters are represented by the type Char. Character literals go in single quotes: '1'.\n\nSpecial characters start from an escaping backslash \\. The following escape sequences are supported: \\b, \\n, \\r, \\. To encode any other character, use the Unicode escape sequence syntax \\uFF00.",
+            des = "Characters are represented by the type Char. Character literals go in single quotes: '1'.\nSpecial characters start from an escaping backslash \\. The following escape sequences are supported: \\b, \\n, \\r, \\. To encode any other character, use the Unicode escape sequence syntax \\uFF00.",
             top = "3. Data types",
             code = "\n" + "val aChar: Char = 'a'\n" +
                     "\n" +
@@ -747,7 +741,7 @@ object ArticleList {
         Article(
             paragraph = "3.13.",
             title = "Strings",
-            des = "Strings in Kotlin are represented by the type String. Generally, a string value is a sequence of characters in double quotes (\" ).\n\nElements of a string are characters that you can access via the indexing operation: s[i]. You can iterate over these characters with a for loop.\n\nStrings are immutable. Once you initialize a string, you can not change its value or assign a new value to it. All operations that transform strings return their results in a new String object, leaving the original string unchanged.\n\nTo concatenate strings, use the + operator. This also works for concatenating strings with values of other types, as long as the first element in the expression is a string.\n\nNote that in most cases using string templates or raw strings is preferable to string concatenation.",
+            des = "Strings in Kotlin are represented by the type String. Generally, a string value is a sequence of characters in double quotes (\" ).\nElements of a string are characters that you can access via the indexing operation: s[i]. You can iterate over these characters with a for loop.\nStrings are immutable. Once you initialize a string, you can not change its value or assign a new value to it. All operations that transform strings return their results in a new String object, leaving the original string unchanged.\nTo concatenate strings, use the + operator. This also works for concatenating strings with values of other types, as long as the first element in the expression is a string.\nNote that in most cases using string templates or raw strings is preferable to string concatenation.",
             top = "3. Data types",
             code = "\n" + "val str = \"abcd 123\"\n" +
                     "val str = \"abcd\"\n" +
@@ -758,7 +752,7 @@ object ArticleList {
         Article(
             paragraph = "3.14.",
             title = "String literals",
-            des = "Kotlin has two types of string literals:\n•escaped strings that may contain escaped characters\n•raw strings that can contain newlines and arbitrary text\nEscaping is done in the conventional way, with a backslash (\\ ).\n\nA raw string is delimited by a triple quote (\"\"\" ), contains no escaping and can contain newlines and any other characters. To remove leading whitespace from raw strings, use the trimMargin() function.\n",
+            des = "Kotlin has two types of string literals:\n•escaped strings that may contain escaped characters\n•raw strings that can contain newlines and arbitrary text\nEscaping is done in the conventional way, with a backslash (\\ ).\nA raw string is delimited by a triple quote (\"\"\" ), contains no escaping and can contain newlines and any other characters. To remove leading whitespace from raw strings, use the trimMargin() function.\n",
             top = "3. Data types",
             code = "\n" + "val s = \"Hello, world!\n\"\n" +
                     "val text = \"\"\"\n" +
@@ -770,7 +764,7 @@ object ArticleList {
         Article(
             paragraph = "3.15.",
             title = "Arrays",
-            des = "Arrays in Kotlin are represented by the Array class. It has get and set functions that turn into [] by operator overloading conventions, and the size property, along with other useful member functions.\n\nTo create an array, use the function arrayOf() and pass the item values to it, so that arrayOf(1, 2, 3) creates an array [1, 2, 3]. Alternatively, the arrayOfNulls() function can be used to create an array of a given size filled with null elements.\n\nAnother option is to use the Array constructor that takes the array size and the function that returns values of array elements given its index.\n\nAs we said above, the [] operation stands for calls to member functions get() and set().\n\nArrays in Kotlin are invariant. This means that Kotlin does not let us assign an Array with String to an Array with Any, which prevents a possible runtime failure (but you can use Array with out Any, see Type Projections ).\n\nKotlin also has classes that represent arrays of primitive types without boxing overhead: ByteArray, ShortArray, IntArray, and so on. These classes have no inheritance relation to the Array class, but they have the same set of methods and properties. Each of them also has a corresponding factory function.",
+            des = "Arrays in Kotlin are represented by the Array class. It has get and set functions that turn into [] by operator overloading conventions, and the size property, along with other useful member functions.\nTo create an array, use the function arrayOf() and pass the item values to it, so that arrayOf(1, 2, 3) creates an array [1, 2, 3]. Alternatively, the arrayOfNulls() function can be used to create an array of a given size filled with null elements.\nAnother option is to use the Array constructor that takes the array size and the function that returns values of array elements given its index.\nAs we said above, the [] operation stands for calls to member functions get() and set().\nArrays in Kotlin are invariant. This means that Kotlin does not let us assign an Array with String to an Array with Any, which prevents a possible runtime failure (but you can use Array with out Any, see Type Projections ).\nKotlin also has classes that represent arrays of primitive types without boxing overhead: ByteArray, ShortArray, IntArray, and so on. These classes have no inheritance relation to the Array class, but they have the same set of methods and properties. Each of them also has a corresponding factory function.",
             top = "3. Data types",
             code = "\n" + "// Creates an Array<String> with values [\"0\", \"1\", \"4\", \"9\", \"16\"]\n" +
                     "val asc = Array(5) { i -> (i * i).toString() }\n" +
@@ -780,7 +774,7 @@ object ArticleList {
         Article(
             paragraph = "4.1.",
             title = "If expression",
-            des = "In Kotlin, if is an expression: it returns a value. Therefore, there is no ternary operator (condition ? then : else) because ordinary if works fine in this role. Branches of if branches can be blocks.\n\nIf you are using if as an expression, for example, for returning its value or assigning it to a variable, the else branch is mandatory.",
+            des = "In Kotlin, if is an expression: it returns a value. Therefore, there is no ternary operator (condition ? then : else) because ordinary if works fine in this role. Branches of if branches can be blocks.\nIf you are using if as an expression, for example, for returning its value or assigning it to a variable, the else branch is mandatory.",
             top = "4. Conditions and loops",
             code = "\n" + "var max = a\n" +
                     "if (a < b) max = b\n" +
@@ -800,7 +794,7 @@ object ArticleList {
         Article(
             paragraph = "4.2.",
             title = "When expression",
-            des = "When defines a conditional expression with multiple branches. It is similar to the switch statement in C-like languages. Its simple form looks like this. when matches its argument against all branches sequentially until some branch condition is satisfied.\n\nWhen can be used either as an expression or as a statement. If it is used as an expression, the value of the first matching branch becomes the value of the overall expression. If it is used as a statement, the values of individual branches are ignored. Just like with if, each branch can be a block, and its value is the value of the last expression in the block.\n\nThe else branch is evaluated if none of the other branch conditions are satisfied. If when is used as an expression, the else branch is mandatory, unless the compiler can prove that all possible cases are covered with branch conditions, for example, with enum class entries and sealed class subtypes).",
+            des = "When defines a conditional expression with multiple branches. It is similar to the switch statement in C-like languages. Its simple form looks like this. when matches its argument against all branches sequentially until some branch condition is satisfied.\nWhen can be used either as an expression or as a statement. If it is used as an expression, the value of the first matching branch becomes the value of the overall expression. If it is used as a statement, the values of individual branches are ignored. Just like with if, each branch can be a block, and its value is the value of the last expression in the block.\nThe else branch is evaluated if none of the other branch conditions are satisfied. If when is used as an expression, the else branch is mandatory, unless the compiler can prove that all possible cases are covered with branch conditions, for example, with enum class entries and sealed class subtypes).",
             top = "4. Conditions and loops",
             code = "\n" + "when (x) {\n" +
                     "    1 -> print(\"x == 1\")\n" +
@@ -814,7 +808,7 @@ object ArticleList {
         Article(
             paragraph = "4.3.",
             title = "For loops",
-            des = "The for loop iterates through anything that provides an iterator. This is equivalent to the foreach loop in languages like C#. As mentioned before, for iterates through anything that provides an iterator. This means that it:\n• has a member or an extension function iterator() that returns Iterator\n• has a member or an extension function next()\n• has a member or an extension function hasNext() that returns Boolean.\nAll of these three functions need to be marked as operator.\nA for loop over a range or an array is compiled to an index-based loop that does not create an iterator object.",
+            des = "The for loop iterates through anything that provides an iterator. This is equivalent to the foreach loop in languages like C#. As mentioned before, for iterates through anything that provides an iterator. This means that it:\n•has a member or an extension function iterator() that returns Iterator\n•has a member or an extension function next()\n•has a member or an extension function hasNext() that returns Boolean.\nAll of these three functions need to be marked as operator.\nA for loop over a range or an array is compiled to an index-based loop that does not create an iterator object.",
             top = "4. Conditions and loops",
             code = "\n" + "for (item: Int in ints) {\n" +
                     "    // ...\n" +
@@ -830,7 +824,7 @@ object ArticleList {
         Article(
             paragraph = "4.4.",
             title = "While loops",
-            des = "While and do-while loops execute their body continuously while their condition is satisfied. The difference between them is the condition checking time:\n•  While checks the condition and, if it is satisfied, executes the body and then returns to the condition check.\n•  Do-while executes the body and then checks the condition. If it is satisfied, the loop repeats. So, the body of do-while executes at least once regardless of the condition.",
+            des = "While and do-while loops execute their body continuously while their condition is satisfied. The difference between them is the condition checking time:\n• While checks the condition and, if it is satisfied, executes the body and then returns to the condition check.\n• Do-while executes the body and then checks the condition. If it is satisfied, the loop repeats. So, the body of do-while executes at least once regardless of the condition.",
             top = "4. Conditions and loops",
             code = "\n" + "while (x > 0) {\n" +
                     "    x--\n" +
@@ -940,31 +934,31 @@ object ArticleList {
             title = "SAM conversions",
             des = "For functional interfaces, you can use SAM conversions that help make your code more concise and readable by using lambda expressions. Instead of creating a class that implements a functional interface manually, you can use a lambda expression. With a SAM conversion, Kotlin can convert any lambda expression whose signature matches the signature of the interface single method into the code, which dynamically instantiates the interface implementation. For example, consider the following Kotlin functional interface:",
             top = "5. Classes and objects",
-            code = "\n" + "//For example, consider the following Kotlin functional interface:\n\" +\n" +
-                    "                    \"fun interface IntPredicate {\n\" +\n" +
-                    "                    \"   fun accept(i: Int): Boolean\n\" +\n" +
-                    "                    \"}\n\" +\n" +
-                    "                    \"If you don't use a SAM conversion, you will need to write code like this:\n\" +\n" +
-                    "                    \"// Creating an instance of a class\n\" +\n" +
-                    "                    \"val isEven = object : IntPredicate {\n\" +\n" +
-                    "                    \"   override fun accept(i: Int): Boolean {\n\" +\n" +
-                    "                    \"       return i % 2 == 0\n\" +\n" +
-                    "                    \"   }\n\" +\n" +
-                    "                    \"}" + "\n",
+            code =  "\n" +
+                    "fun interface IntPredicate {\n" +
+                    "   fun accept(i: Int): Boolean\n" +
+                    "}\n" +
+                    "\n" +
+                    "val isEven = IntPredicate { it % 2 == 0 }\n" +
+                    "\n" +
+                    "fun main() {\n" +
+                    "   println(\"Is 7 even? - \${isEven.accept(7)}\")\n" +
+                    "}" +
+                    "\n",
             link = "https://kotlinlang.org/docs/fun-interfaces.html#sam-conversions",
         ),
         Article(
             paragraph = "5.7.",
             title = "Functional interfaces vs. type aliases",
-            des = "Functional interfaces and type aliases serve different purposes. Type aliases are just names for existing types – they don\\'t create a new type, while functional interfaces do. You can provide extensions that are specific to a particular functional interface to be inapplicable for plain functions or their type aliases. Type aliases can have only one member, while functional interfaces can have multiple non-abstract members and one abstract member. Functional interfaces can also implement and extend other interfaces. Functional interfaces are more flexible and provide more capabilities than type aliases, but they can be more costly both syntactically and at runtime because they can require conversions to a specific interface. When you choose which one to use in your code, consider your needs:\n• If your API needs to accept a function (any function) with some specific parameter and return types – use a simple functional type or define a type alias to give a shorter name to the corresponding functional type.\n• If your API accepts a more complex entity than a function – for example, it has non-trivial contracts and/or operations on it that can\\'t be expressed in a functional type\\'s signature – declare a separate functional interface for it.",
+            des = "Functional interfaces and type aliases serve different purposes. Type aliases are just names for existing types – they don\\'t create a new type, while functional interfaces do. You can provide extensions that are specific to a particular functional interface to be inapplicable for plain functions or their type aliases. Type aliases can have only one member, while functional interfaces can have multiple non-abstract members and one abstract member. Functional interfaces can also implement and extend other interfaces. Functional interfaces are more flexible and provide more capabilities than type aliases, but they can be more costly both syntactically and at runtime because they can require conversions to a specific interface. When you choose which one to use in your code, consider your needs:\n•If your API needs to accept a function (any function) with some specific parameter and return types – use a simple functional type or define a type alias to give a shorter name to the corresponding functional type.\n•If your API accepts a more complex entity than a function – for example, it has non-trivial contracts and/or operations on it that can\\'t be expressed in a functional type\\'s signature – declare a separate functional interface for it.",
             top = "5. Classes and objects",
-            code = "\n" + "" + "\n",
+            code = "",
             link = "https://kotlinlang.org/docs/fun-interfaces.html#functional-interfaces-vs-type-aliasess",
         ),
         Article(
             paragraph = "5.8.",
             title = "Visibility modifiers",
-            des = "Classes, objects, interfaces, constructors, functions, properties and their setters can have visibility modifiers. Getters always have the same visibility as the property. There are four visibility modifiers in Kotlin:\n•  private (it means visible inside this class only (including all its members)) \n• protected (is the same as private but is also visible in subclasses)\n• internal (it means that any client inside this module who sees the declaring class sees its internal members)\n• public (it means that any client who sees the declaring class sees its public members) is the default visibility is public. \nFunctions, properties and classes, objects and interfaces can be declared at the \"top-level\" directly inside a package:\n•  If you do not specify any visibility modifier, public is used by default, which means that your declarations will be visible everywhere\n•  If you mark a declaration private, it will only be visible inside the file containing the declaration\n•  If you mark it internal, it is visible everywhere in the same module\n•  protected is not available for top-level declarations.",
+            des = "Classes, objects, interfaces, constructors, functions, properties and their setters can have visibility modifiers. Getters always have the same visibility as the property. There are four visibility modifiers in Kotlin:\n• private (it means visible inside this class only (including all its members)) \n•protected (is the same as private but is also visible in subclasses)\n•internal (it means that any client inside this module who sees the declaring class sees its internal members)\n•public (it means that any client who sees the declaring class sees its public members) is the default visibility is public. \nFunctions, properties and classes, objects and interfaces can be declared at the \"top-level\" directly inside a package:\n• If you do not specify any visibility modifier, public is used by default, which means that your declarations will be visible everywhere\n• If you mark a declaration private, it will only be visible inside the file containing the declaration\n• If you mark it internal, it is visible everywhere in the same module\n• protected is not available for top-level declarations.",
             top = "5. Classes and objects",
             code = "\n" + "// file name: example.kt\n" +
                     "package foo\n" +
@@ -974,13 +968,14 @@ object ArticleList {
                     "public var bar: Int = 5 // property is visible everywhere\n" +
                     "    private set         // setter is visible only in example.kt\n" +
                     "\n" +
-                    "internal val baz = 6    // visible inside the same module" + "\n",
+                    "internal val baz = 6    // visible inside the same module"
+                    + "\n",
             link = "https://kotlinlang.org/docs/visibility-modifiers.html",
         ),
         Article(
             paragraph = "5.9.",
             title = "Extensions",
-            des = "Kotlin provides the ability to extend a class with new functionality without having to inherit from the class or use design patterns such as Decorator. This is done via special declarations called extensions.\nFor example, you can write new functions for a class from a third-party library that you can\\'t modify. Such functions can be called in the usual way, as if they were methods of the original class. This mechanism is called an extension function. There are also extension properties that let you define new properties for existing classes. To declare an extension function, prefix its name with a receiver type, which refers to the type being extended:",
+            des = "Kotlin provides the ability to extend a class with new functionality without having to inherit from the class or use design patterns such as Decorator. This is done via special declarations called extensions.\nFor example, you can write new functions for a class from a third-party library that you can't modify. Such functions can be called in the usual way, as if they were methods of the original class. This mechanism is called an extension function. There are also extension properties that let you define new properties for existing classes. To declare an extension function, prefix its name with a receiver type, which refers to the type being extended:",
             top = "5. Classes and objects",
             code = "\n" + "fun MutableList<Int>.swap(index1: Int, index2: Int) {\n" +
                     "    val tmp = this[index1] // 'this' corresponds to the list\n" +
@@ -1033,16 +1028,6 @@ object ArticleList {
         ),
         Article(
             paragraph = "6.1.",
-            title = "Functions",
-            des = "Functions in Kotlin are declared using the fun keyword:",
-            top = "6. Functions",
-            code = "\n" + "fun double(x: Int): Int {\n" +
-                    "    return 2 * x\n" +
-                    "}" + "\n",
-            link = "https://kotlinlang.org/docs/functions.html",
-        ),
-        Article(
-            paragraph = "6.2.",
             title = "Parameters",
             des = "Function parameters are defined using Pascal notation - name: type. Parameters are separated using commas. Each parameter must be explicitly typed:",
             top = "6. Functions",
@@ -1054,7 +1039,7 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/functions.html#parameters",
         ),
         Article(
-            paragraph = "6.3.",
+            paragraph = "6.2.",
             title = "Default arguments",
             des = "Function parameters can have default values, which are used when you skip the corresponding argument.\nOverriding methods always use the same default parameter values as the base method. When overriding a method with default parameter values, the default parameter values must be omitted from the signature. If a default parameter precedes a parameter with no default value, the default value can only be used by calling the function with named arguments.",
             top = "6. Functions",
@@ -1066,9 +1051,9 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/functions.html#default-arguments",
         ),
         Article(
-            paragraph = "6.4.",
+            paragraph = "6.3.",
             title = "Named arguments",
-            des = "When calling a function, you can name one or more of its arguments. This may be helpful when a function has a large number of arguments, and it\\'s difficult to associate a value with an argument, especially if it\\'s a boolean or null value.\nWhen you use named arguments in a function call, you can freely change the order they are listed in, and if you want to use their default values you can just leave them out altogether. Consider the following function reformat() that has 4 arguments with default values.",
+            des = "When calling a function, you can name one or more of its arguments. This may be helpful when a function has a large number of arguments, and it's difficult to associate a value with an argument, especially if it\\'s a boolean or null value.\nWhen you use named arguments in a function call, you can freely change the order they are listed in, and if you want to use their default values you can just leave them out altogether. Consider the following function reformat() that has 4 arguments with default values.",
             top = "6. Functions",
             code = "\n" + "fun reformat(\n" +
                     "    str: String,\n" +
@@ -1087,7 +1072,7 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/functions.html#named-arguments",
         ),
         Article(
-            paragraph = "6.5.",
+            paragraph = "6.4.",
             title = "Unit-returning functions",
             des = "If a function does not return any useful value, its return type is Unit. Unit is a type with only one value - Unit. This value does not have to be returned explicitly:",
             top = "6. Functions",
@@ -1101,7 +1086,7 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/functions.html#unit-returning-functions",
         ),
         Article(
-            paragraph = "6.6.",
+            paragraph = "6.5.",
             title = "Single-expression functions",
             des = "When a function returns a single expression, the curly braces can be omitted and the body is specified after a = symbol:</",
             top = "6. Functions",
@@ -1109,17 +1094,17 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/functions.html#single-expression-functions",
         ),
         Article(
-            paragraph = "6.7.",
+            paragraph = "6.6.",
             title = "Explicit return types",
             des = "Functions with block body must always specify return types explicitly, unless it\\'s intended for them to return Unit, in which case it is optional. Kotlin does not infer return types for functions with block bodies because such functions may have complex control flow in the body, and the return type will be non-obvious to the reader (and sometimes even for the compiler).",
             top = "6. Functions",
-            code = "\n" + "" + "\n",
+            code = "",
             link = "https://kotlinlang.org/docs/functions.html#explicit-return-types",
         ),
         Article(
-            paragraph = "6.8.",
+            paragraph = "6.7.",
             title = "Variable number of arguments (Varargs)",
-            des = "<![CDATA[You can mark a parameter of a function (usually the last one) with the vararg modifier. Inside a function a vararg -parameter of type T is visible as an array of T, i.e. the ts variable in the example above has type Array<out T>. Only one parameter can be marked as vararg. If a vararg parameter is not the last one in the list, values for the following parameters can be passed using the named argument syntax, or, if the parameter has a function type, by passing a lambda outside parentheses. When you call a vararg -function, you can pass arguments one-by-one, for example asList(1, 2, 3). If you already have an array and want to pass its contents to the function, use the spread operator (prefix the array with * ):]]>",
+            des = "You can mark a parameter of a function (usually the last one) with the vararg modifier. Inside a function a vararg -parameter of type T is visible as an array of T, i.e. the ts variable in the example above has type Array<out T>. Only one parameter can be marked as vararg. If a vararg parameter is not the last one in the list, values for the following parameters can be passed using the named argument syntax, or, if the parameter has a function type, by passing a lambda outside parentheses. When you call a vararg -function, you can pass arguments one-by-one, for example asList(1, 2, 3). If you already have an array and want to pass its contents to the function, use the spread operator (prefix the array with * ).",
             top = "6. Functions",
             code = "\n" + "fun <T> asList(vararg ts: T): List<T> {\n" +
                     "    val result = ArrayList<T>()\n" +
@@ -1128,12 +1113,22 @@ object ArticleList {
                     "    return result\n" +
                     "}\n" +
                     "val list = asList(1, 2, 3)" + "\n",
-            link = "https://kotlinlang.org/docs/functions.html#explicit-return-types",
+            link = "https://kotlinlang.org/docs/functions.html#variable-number-of-arguments-varargs",
         ),
         Article(
-            paragraph = "6.9.",
+            paragraph = "6.8.",
             title = "Infix notation",
-            des = "<![CDATA[Functions marked with the infix keyword can also be called using the infix notation (omitting the dot and the parentheses for the call). Infix functions must meet the following requirements:\n•They must be member functions or extension functions.\n•They must have a single parameter.\n•The parameter must not accept variable number of arguments and must have no default value.\nInfix function calls have lower precedence than the arithmetic operators, type casts, and the rangeTo operator. The following expressions are equivalent:\n•1 shl 2 + 3 is equivalent to 1 shl (2 + 3)\n•0 until n * 2 is equivalent to 0 until (n * 2)\n•xs union ys as Set<*> is equivalent to xs union (ys as Set<*>)\nOn the other hand, infix function call\\'s precedence is higher than that of the boolean operators && and ||, is- and in -checks, and some other operators. These expressions are equivalent as well:\n•a && b xor c is equivalent to a && (b xor c)\n•a xor b in c is equivalent to (a xor b) in c.]]>",
+            des = "Functions marked with the infix keyword can also be called using the infix notation (omitting the dot and the parentheses for the call). Infix functions must meet the following requirements:\n" +
+                    "•They must be member functions or extension functions.\n" +
+                    "•They must have a single parameter.\n" +
+                    "•The parameter must not accept variable number of arguments and must have no default value.\n" +
+                    "Infix function calls have lower precedence than the arithmetic operators, type casts, and the rangeTo operator. The following expressions are equivalent:\n" +
+                    "•1 shl 2 + 3 is equivalent to 1 shl (2 + 3)\n" +
+                    "•0 until n * 2 is equivalent to 0 until (n * 2)\n" +
+                    "•xs union ys as Set<*> is equivalent to xs union (ys as Set<*>)\n" +
+                    "On the other hand, infix function call\\'s precedence is higher than that of the boolean operators && and ||, is- and in -checks, and some other operators. These expressions are equivalent as well:\n" +
+                    "•a && b xor c is equivalent to a && (b xor c)\n" +
+                    "•a xor b in c is equivalent to (a xor b) in c.",
             top = "6. Functions",
             code = "\n" + "infix fun Int.shl(x: Int): Int { ... }\n" +
                     "\n" +
@@ -1145,7 +1140,7 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/functions.html#infix-notation",
         ),
         Article(
-            paragraph = "6.10.",
+            paragraph = "6.9.",
             title = "Local functions",
             des = "Kotlin supports local functions, which are functions inside another function.\nA local function can access local variables of outer functions (the closure). In the case above, the visited can be a local variable.",
             top = "6. Functions",
@@ -1161,7 +1156,7 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/functions.html#local-functions",
         ),
         Article(
-            paragraph = "6.11.",
+            paragraph = "6.10.",
             title = "Generic functions",
             des = "A member function is a function that is defined inside a class or object:",
             top = "6. Functions",
@@ -1171,7 +1166,7 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/generics.html",
         ),
         Article(
-            paragraph = "6.12.",
+            paragraph = "6.11.",
             title = "Tail recursive functions",
             des = "Kotlin supports a style of functional programming known as tail recursion. For some algorithms that would normally use loops you can use a recursive function instead without a risk of stack overflow. When a function is marked with the tailrec modifier and meets the required form, the compiler optimizes out the recursion, leaving behind a fast and efficient loop based version instead.\nTo be eligible for the tailrec modifier, a function must call itself as the last operation it performs. You cannot use tail recursion when there is more code after the recursive call, and you cannot use it within try/ catch/ finally blocks. Currently, tail recursion is supported by Kotlin for JVM and Kotlin/Native.",
             top = "6. Functions",
@@ -1182,4 +1177,5 @@ object ArticleList {
             link = "https://kotlinlang.org/docs/functions.html#tail-recursive-functions",
         )
     )
+
 }
