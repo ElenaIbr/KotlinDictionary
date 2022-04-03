@@ -1,5 +1,7 @@
 # Kotlin Library
 
+[Download from Google Play](https://play.google.com/store/apps/details?id=com.ibraeva.kotlinlibrary&hl=nl&gl=US)
+
 Kotlin Dictionary is an example of study application, which consists of articles about Kontlin language (short content, code images and links to resource).
 
 
